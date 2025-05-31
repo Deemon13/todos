@@ -1,26 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import "./index.css";
+import { App } from "./components";
 
-const App = () => {
-  return (
-    <section className="todoapp">
-      <header className="header">
-        <h1>todos</h1>
-        <input
-          className="new-todo"
-          placeholder="What needs to be done?"
-          autoFocus
-        />
-      </header>
-    </section>
-  );
-};
+import todoData from "./data";
+
+import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <App todos={todoData} title="todos" />
   </React.StrictMode>
 );
